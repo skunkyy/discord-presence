@@ -45,17 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('load', () => {
-    // Oryginalny tytuł z dodatkowymi spacjami i separatorem dla płynnego efektu
     const originalTitle = "skunkyy__ | Profile "; 
     let title = originalTitle;
 
     setInterval(() => {
-        // Przesuń pierwszy znak na koniec całego tekstu
         title = title.substring(1) + title.substring(0, 1);
         
-        // Ustaw nowy tytuł w dokumencie
         document.title = title;
-    }, 300); // Zmień prędkość przewijania tutaj (mniejsza wartość = szybciej)
+    }, 300);
     });
 
     const enterSite = () => {
