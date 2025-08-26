@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <div id="enter-overlay">
+        <div class="enter-text">Press any key or click to enter</div>
+    </div>
+
+    <video muted loop playsinline id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <main class="profile-card">
+        <div class="avatar-container">
+            <img id="avatar" src="https://i.imgur.com/qmW1gVz.png" alt="Discord Avatar">
+            <div id="status-indicator"></div>
+        </div>
+        
+        <h1 id="nickname">Loading...</h1>
+        <p id="username">@loading...</p>
+
+         <p class="profile-bio">Developer & server admin passionate about code, community, and music.</p>
+
+        <div id="activities-container"></div>
+
+        <div class="socials">
+            <a href="https://twitter.com/@_skunkyy_" target="_blank" class="social-button">
+                <i class="fab fa-twitter"></i>
+                <div class="social-text-container">
+                    <span>Twitter</span>
+                    <span class="social-link">@_skunkyy_</span>
+                </div>
+            </a>
+            <a href="https://discord.com/users/658259140141121536" target="_blank" class="social-button">
+                <i class="fab fa-discord"></i>
+                <div class="social-text-container">
+                    <span>Personal Discord</span>
+                    <span class="social-link">skunkyy__</span>
+                </div>
+            </a>
+             <a href="https://dc.vipmc.pl/" target="_blank" class="social-button">
+                <i class="fab fa-discord"></i>
+                <div class="social-text-container">
+                    <span>VIPMC.PL Server</span>
+                    <span class="social-link">Head Admin @ VIPMC</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="view-counter">
+            <i class="fas fa-eye"></i>
+            <span id="view-count">-</span>
+        </div>
+    </main>
+    
+    <div class="music-player">
+        <button id="music-toggle" aria-label="Toggle Music Panel">
+            <i class="fas fa-volume-high"></i>
+        </button>
+        <div id="volume-panel" class="hidden">
+            <span id="volume-percentage">50%</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
