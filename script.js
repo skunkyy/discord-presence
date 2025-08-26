@@ -44,6 +44,34 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
+        window.addEventListener('load', () => {
+    // Oryginalny tytuł z dodatkowymi spacjami i separatorem dla płynnego efektu
+    const originalTitle = "skunkyy__ | Profile "; 
+    let title = originalTitle;
+
+    setInterval(() => {
+        // Przesuń pierwszy znak na koniec całego tekstu
+        title = title.substring(1) + title.substring(0, 1);
+        
+        // Ustaw nowy tytuł w dokumencie
+        document.title = title;
+    }, 300); // Zmień prędkość przewijania tutaj (mniejsza wartość = szybciej)
+    });
+
+    const enterSite = () => {
+        enterOverlay.style.opacity = '0';
+        setTimeout(() => enterOverlay.style.display = 'none', 500);
+
+        video.play();
+        music.play();
+
+        profileCard.classList.add('visible');
+        musicPlayer.classList.add('visible');
+        
+        connectLanyard();
+        updateViewCounter();
+    };
+
     const enterSite = () => {
         enterOverlay.style.opacity = '0';
         setTimeout(() => enterOverlay.style.display = 'none', 500);
@@ -119,4 +147,5 @@ document.addEventListener('DOMContentLoaded', () => {
             activitiesContainerEl.innerHTML = `<p class="idle-message">Chilling and vibing. Probably watching the ceiling.</p>`;
         }
     };
+
 });
